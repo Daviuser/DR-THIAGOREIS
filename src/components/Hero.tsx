@@ -2,11 +2,13 @@
 import Image from "next/image";
 import { motion, MotionConfig } from "motion/react";
 import { MessageCircle } from "lucide-react";
-import { whatsapp, site } from "@/lib/site";
+import { site } from "@/lib/site";
+import { useContact } from "@/components/ContactSystem";
 const ease = [0.22, 1, 0.36, 1] as const;
 const lines = ["Cuidado preciso,", "feito com calma."];
 const seq = (d: number) => ({ initial: { opacity: 0, y: 18, filter: "blur(6px)" }, animate: { opacity: 1, y: 0, filter: "blur(0px)" }, transition: { delay: d, duration: 0.9, ease } });
 export default function Hero() {
+  const openContact = useContact();
   return (
     <MotionConfig reducedMotion="user">
       <section id="top" className="relative overflow-hidden bg-[linear-gradient(160deg,#101923,#182633_60%,#101923)] pt-24 md:pt-0">
@@ -24,9 +26,9 @@ export default function Hero() {
               Atendimento odontológico com atenção ao paciente, clareza em cada etapa e respeito ao seu tempo.
             </motion.p>
             <motion.div {...seq(1.3)} className="mt-10">
-              <motion.a whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.95 }} href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn">
+              <motion.button type="button" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.95 }} onClick={openContact} className="btn">
                 <MessageCircle size={18} /> Agendar pelo WhatsApp
-              </motion.a>
+              </motion.button>
             </motion.div>
           </div>
 

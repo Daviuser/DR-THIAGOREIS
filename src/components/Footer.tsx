@@ -1,5 +1,7 @@
-import { nav, site, whatsapp } from "@/lib/site";
+import { nav, site } from "@/lib/site";
+import { useContact } from "@/components/ContactSystem";
 export default function Footer() {
+  const openContact = useContact();
   return (
     <footer className="border-t border-mist/10 bg-deep py-14 text-mist/75">
       <div className="wrap flex flex-col justify-between gap-10 md:flex-row">
@@ -12,7 +14,7 @@ export default function Footer() {
           {nav.map((n) => <a key={n.href} href={n.href} className="hover:text-accent">{n.label}</a>)}
         </nav>
         <div className="flex flex-col gap-2 text-sm">
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp (71) 98525-1396</a>
+          <button type="button" onClick={openContact} className="text-left hover:text-accent">WhatsApp · escolha a unidade</button>
           {site.instagram && <a href={site.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-accent">Instagram</a>}
         </div>
       </div>

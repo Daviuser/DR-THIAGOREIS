@@ -2,8 +2,10 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
-import { nav, site, whatsapp } from "@/lib/site";
+import { nav, site } from "@/lib/site";
+import { useContact } from "@/components/ContactSystem";
 export default function Header() {
+  const openContact = useContact();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -17,7 +19,7 @@ export default function Header() {
         <a href="#top" className="text-2xl font-extrabold tracking-tight text-soft">{site.title}</a>
         <nav className="hidden items-center gap-9 md:flex" aria-label="Principal">
           {nav.map((n) => <a key={n.href} href={n.href} className="text-sm text-mist/70 transition-colors hover:text-soft">{n.label}</a>)}
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn !px-5 !py-3 text-sm">Agendar consulta</a>
+          <button type="button" onClick={openContact} className="btn !px-5 !py-3 text-sm">Agendar consulta</button>
         </nav>
         <button className="md:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open}>
           {open ? <X /> : <Menu />}
@@ -29,7 +31,7 @@ export default function Header() {
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }} className="overflow-hidden md:hidden" aria-label="Mobile">
             <div className="wrap flex flex-col gap-5 py-8">
               {nav.map((n) => <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="text-3xl font-bold tracking-tight text-soft">{n.label}</a>)}
-              <a href={whatsapp} target="_blank" rel="noopener noreferrer" className="btn mt-2 justify-center">Agendar pelo WhatsApp</a>
+              <button type="button" onClick={openContact} className="btn mt-2 justify-center">Agendar pelo WhatsApp</button>
             </div>
           </motion.nav>
         )}

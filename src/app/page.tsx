@@ -7,10 +7,11 @@ import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import ScrollFX from "@/components/ScrollFX";
+import ContactSystem from "@/components/ContactSystem";
 export default function Page() {
-  return (<>
+  return (<ContactSystem><>
     <ScrollFX /><Header />
     <main><Hero /><About /><Services /><Differentials /><FinalCta /></main>
     <Footer /><WhatsAppFab />
-  </>);
+  </></ContactSystem>);
 }

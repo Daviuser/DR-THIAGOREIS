@@ -3,12 +3,14 @@ export const site = {
   name: "Dr. Thiago Reis",
   title: "Dr. Thiago Reis",
   role: "Odontologia · Endodontia",
-  phone: "5571985251396",
-  message: "Ol\u00e1, Dr. Thiago! Gostaria de obter mais informa\u00e7\u00f5es sobre seus atendimentos e agendar uma consulta.",
   address: "", // ex.: "Rua Exemplo, 100 — Salvador, BA"
   instagram: "", // ex.: "https://instagram.com/usuario"
 };
-export const whatsapp = `https://wa.me/${site.phone}?text=${encodeURIComponent(site.message)}`;
+export const units = [
+  { id: "santaluz", name: "Santaluz", phone: "5575981401503", displayPhone: "(75) 98140-1503", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Santaluz." },
+  { id: "valente", name: "Valente", phone: "5575981444698", displayPhone: "(75) 98144-4698", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Valente." },
+] as const;
+export const whatsappForUnit = (unit: typeof units[number]) => `https://wa.me/${unit.phone}?text=${encodeURIComponent(unit.message)}`;
 export const nav = [
   { href: "#apresentacao", label: "Apresentação" },
   { href: "#servicos", label: "Serviços" },
