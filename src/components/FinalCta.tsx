@@ -1,3 +1,4 @@
+"use client";
 import { MessageCircle } from "lucide-react";
 import { useContact } from "@/components/ContactSystem";
 export default function FinalCta() {

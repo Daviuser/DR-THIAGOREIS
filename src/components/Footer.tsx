@@ -1,3 +1,4 @@
+"use client";
 import { nav, site } from "@/lib/site";
 import { useContact } from "@/components/ContactSystem";
 export default function Footer() {
