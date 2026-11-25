@@ -14,7 +14,7 @@ export default function About() {
           <p className="mb-5 text-sm tracking-wide text-accent">Sobre mim</p>
           <Words text="Muito além de cuidar de sorrisos, transformar experiências." className="text-4xl font-extrabold tracking-tight leading-[1.1] text-soft md:text-5xl" />
           <div className="mt-8 max-w-prose space-y-5 text-lg leading-[1.75] text-mist/70">
-            <Reveal delay={0.1}><p>Sou o Dr. Thiago Reis, dentista comprometido com a saúde, a estética e o bem-estar de cada paciente.</p></Reveal>
+            <Reveal delay={0.1}><p>Sou o Dr. Thiago Reis, dentista com atendimento em Santaluz-BA e Valente-BA.</p></Reveal>
             <Reveal delay={0.15}><p>Acredito que um sorriso bonito começa com cuidado, atenção e confiança. Por isso, meu atendimento é baseado em uma abordagem humanizada, buscando compreender as necessidades de cada pessoa e oferecer um tratamento individualizado.</p></Reveal>
             <Reveal delay={0.2}><p>Meu objetivo é proporcionar uma experiência odontológica acolhedora, segura e de qualidade, valorizando cada detalhe para que você se sinta confortável e confiante em todas as etapas do tratamento.</p></Reveal>
           </div>

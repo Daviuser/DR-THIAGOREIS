@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 import { site } from "@/lib/site";
 import { useContact } from "@/components/ContactSystem";
 const ease = [0.22, 1, 0.36, 1] as const;
-const lines = ["Cuidado preciso,", "feito com calma."];
+const lines = ["Dr. Thiago Reis", "Dentista em Santaluz", "e Valente - BA"];
 const seq = (d: number) => ({ initial: { opacity: 0, y: 18, filter: "blur(6px)" }, animate: { opacity: 1, y: 0, filter: "blur(0px)" }, transition: { delay: d, duration: 0.9, ease } });
 export default function Hero() {
   const openContact = useContact();
@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="wrap grid min-h-[100svh] items-center gap-4 pb-14 md:grid-cols-[1fr_1fr] md:gap-10 md:pb-0">
           <div className="order-2 md:order-1">
             <motion.p {...seq(0.3)} className="mb-6 text-sm tracking-wide text-accent">{site.role}</motion.p>
-            <h1 className="text-[clamp(2.4rem,5.6vw,5rem)] font-extrabold tracking-tight leading-[1.02] text-soft">
+            <h1 className="text-[clamp(2.2rem,4.8vw,4.4rem)] font-extrabold tracking-tight leading-[1.02] text-soft">
               {lines.map((l, i) => (
                 <span key={l} className="block overflow-hidden pb-1">
                   <motion.span className="block" initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ delay: 0.5 + i * 0.15, duration: 1.1, ease }}>{l}</motion.span>
@@ -23,7 +23,7 @@ export default function Hero() {
               ))}
             </h1>
             <motion.p {...seq(1.1)} className="mt-8 max-w-md text-lg leading-relaxed text-mist/70">
-              Atendimento odontológico com atenção ao paciente, clareza em cada etapa e respeito ao seu tempo.
+              Cuidado preciso, feito com calma. Atendimento odontológico em Santaluz-BA e Valente-BA, com atenção ao paciente, clareza em cada etapa e respeito ao seu tempo.
             </motion.p>
             <motion.div {...seq(1.3)} className="mt-10">
               <motion.button type="button" whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.95 }} onClick={openContact} className="btn">

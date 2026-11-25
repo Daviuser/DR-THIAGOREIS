@@ -14,11 +14,11 @@ export function Reveal({ children, delay = 0, className }: { children: React.Rea
 }
 
 /** Títulos: revelação palavra por palavra. */
-export function Words({ text, className, as: Tag = "h2" }: { text: string; className?: string; as?: "h1" | "h2" }) {
+export function Words({ text, className, id, as: Tag = "h2" }: { text: string; className?: string; id?: string; as?: "h1" | "h2" }) {
   const M = motion[Tag];
   return (
     <MotionConfig reducedMotion="user">
-      <M className={className} initial="hidden" whileInView="show" viewport={vp} transition={{ staggerChildren: 0.07 }} aria-label={text}>
+      <M id={id} className={className} initial="hidden" whileInView="show" viewport={vp} transition={{ staggerChildren: 0.07 }} aria-label={text}>
         {text.split(" ").map((w, i) => (
           <span key={i} aria-hidden className="inline-block overflow-hidden pb-[0.12em] align-bottom">
             <motion.span className="inline-block" variants={{ hidden: { y: "110%", filter: "blur(6px)" }, show: { y: 0, filter: "blur(0px)" } }}

@@ -13,6 +13,7 @@ export const units = [
 export const whatsappForUnit = (unit: typeof units[number]) => `https://wa.me/${unit.phone}?text=${encodeURIComponent(unit.message)}`;
 export const nav = [
   { href: "#apresentacao", label: "Apresentação" },
+  { href: "#unidades", label: "Unidades" },
   { href: "#servicos", label: "Serviços" },
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#contato", label: "Contato" },
