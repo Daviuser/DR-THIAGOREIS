@@ -1,19 +1,19 @@
-// Edite aqui os dados do site. Só "Endodontia" consta na foto (jaleco); o restante é neutro/editável.
 export const site = {
   name: "Dr. Thiago Reis",
   title: "Dr. Thiago Reis",
   role: "Odontologia · Endodontia",
-  address: "", // ex.: "Rua Exemplo, 100 — Salvador, BA"
-  instagram: "", // ex.: "https://instagram.com/usuario"
+  address: "",
+  instagram: "",
 };
 export const units = [
-  { id: "santaluz", name: "Santaluz", phone: "5575981401503", displayPhone: "(75) 98140-1503", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Santaluz." },
-  { id: "valente", name: "Valente", phone: "5575981444698", displayPhone: "(75) 98144-4698", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Valente." },
+  { id: "santaluz", clinic: "NIOS", name: "Santaluz", address: "Joaquim de Góes, 38 — Centro, Santaluz - BA, CEP 48880-000", maps: "https://www.google.com/maps/search/?api=1&query=Joaquim+de+G%C3%B3es%2C+38%2C+Centro%2C+Santaluz+-+BA%2C+48880-000", phone: "5575981401503", displayPhone: "(75) 98140-1503", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Santaluz." },
+  { id: "valente", clinic: "COI", name: "Valente", address: "Rua Landulfo Alves, 139 — Centro, Valente - BA, CEP 48890-198", maps: "https://www.google.com/maps/search/?api=1&query=Rua+Landulfo+Alves%2C+139%2C+Centro%2C+Valente+-+BA%2C+48890-198", phone: "5575981444698", displayPhone: "(75) 98144-4698", message: "Olá! Vim pelo site do Dr. Thiago Reis e gostaria de agendar um horário com ele na unidade de Valente." },
 ] as const;
 export const whatsappForUnit = (unit: typeof units[number]) => `https://wa.me/${unit.phone}?text=${encodeURIComponent(unit.message)}`;
 export const nav = [
   { href: "#apresentacao", label: "Apresentação" },
   { href: "#unidades", label: "Unidades" },
+  { href: "#formacao", label: "Formação" },
   { href: "#servicos", label: "Serviços" },
   { href: "#diferenciais", label: "Diferenciais" },
   { href: "#contato", label: "Contato" },
