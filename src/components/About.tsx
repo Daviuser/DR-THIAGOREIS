@@ -5,8 +5,8 @@ export default function About() {
     <section id="apresentacao" className="py-24 md:py-40">
       <div className="wrap grid items-center gap-14 md:grid-cols-[.9fr_1.1fr] md:gap-20">
         <div className="relative">
-          <div data-mask className="relative aspect-[2/3] overflow-hidden rounded-sm bg-graphite">
-            <Image data-parallax="-6" src="/images/thiago-reis-about.jpeg" alt="Dr. Thiago Reis, cirurgião-dentista" fill sizes="(max-width: 768px) 100vw, 45vw" className="object-cover" />
+          <div data-mask className="relative aspect-[2/3] overflow-hidden rounded-sm">
+            <Image data-parallax="-6" src="/images/thiago-reis.webp" alt="Dr. Thiago Reis, cirurgião-dentista" fill sizes="(max-width: 768px) 100vw, 45vw" className="object-contain" />
           </div>
           <div aria-hidden data-parallax="8" className="absolute -bottom-6 -right-4 -z-10 h-2/3 w-2/3 border border-accent/50" />
         </div>
