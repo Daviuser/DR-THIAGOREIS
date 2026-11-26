@@ -1,7 +1,8 @@
 export const site = {
   name: "Dr. Thiago Reis",
   title: "Dr. Thiago Reis",
-  role: "Odontologia · Endodontia",
+  role: "Clínica Geral | Tratamentos Endodônticos",
+  registration: "Cirurgião-dentista · CRO-BA 24742",
   address: "",
   instagram: "",
 };

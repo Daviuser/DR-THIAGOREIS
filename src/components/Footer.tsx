@@ -9,6 +9,7 @@ export default function Footer() {
         <div>
           <p className="text-3xl font-bold tracking-tight text-mist">{site.title}</p>
           <p className="mt-2 text-sm">{site.role}</p>
+          <p className="mt-1 text-sm">{site.registration}</p>
           {site.address && <p className="mt-4 text-sm">{site.address}</p>}
         </div>
         <nav className="flex flex-col gap-2 text-sm" aria-label="Rodapé">
