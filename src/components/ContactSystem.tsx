@@ -63,7 +63,7 @@ export default function ContactSystem({ children }: { children: React.ReactNode 
             {units.map((unit) => <a key={unit.id} href={whatsappForUnit(unit)} target="_blank" rel="noopener noreferrer" onClick={close}
               className="group flex items-center gap-4 rounded-2xl border border-white/[.08] bg-[#182633] p-5 transition duration-300 hover:-translate-y-0.5 hover:border-[#4A9BB8]/60 hover:bg-[#263B4B] hover:shadow-[0_12px_32px_-20px_rgba(74,155,184,.65)] focus-visible:outline-accent">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-[#101923]"><MapPin size={23} strokeWidth={1.7} /></span>
-              <span className="min-w-0"><span className="block font-bold tracking-wide text-soft">{unit.name.toUpperCase()} – BA</span><span className="mt-1 block text-sm text-mist/60">Atendimento em {unit.name}.</span><span className="mt-2 block text-sm font-medium tabular-nums text-accent">{unit.displayPhone}</span></span>
+              <span className="min-w-0"><span className="block font-bold tracking-wide text-soft">{unit.clinic} — {unit.name}</span><span className="mt-1 block text-sm text-mist/60">Atendimento em {unit.name} - BA.</span><span className="mt-2 block text-sm font-medium tabular-nums text-accent">{unit.displayPhone}</span></span>
               <span aria-hidden className="ml-auto text-xl text-accent transition-transform group-hover:translate-x-1">→</span>
             </a>)}
           </div>
