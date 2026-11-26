@@ -5,13 +5,13 @@ export default function About() {
     <section id="apresentacao" className="py-24 md:py-40">
       <div className="wrap grid items-center gap-14 md:grid-cols-[.9fr_1.1fr] md:gap-20">
         <div className="relative">
-          <div data-mask className="relative aspect-[4/5] overflow-hidden rounded-sm bg-graphite">
-            <Image data-parallax="-6" src="/images/placeholder-clinica.svg" alt="Ambiente clínico (imagem ilustrativa)" fill unoptimized sizes="45vw" className="h-[112%] object-cover" />
+          <div data-mask className="relative aspect-[2/3] overflow-hidden rounded-sm bg-graphite">
+            <Image data-parallax="-6" src="/images/thiago-reis-about.jpeg" alt="Dr. Thiago Reis, cirurgião-dentista" fill sizes="(max-width: 768px) 100vw, 45vw" className="object-cover" />
           </div>
           <div aria-hidden data-parallax="8" className="absolute -bottom-6 -right-4 -z-10 h-2/3 w-2/3 border border-accent/50" />
         </div>
         <div>
-          <p className="mb-5 text-sm tracking-wide text-accent">Sobre mim</p>
+          <p className="mb-5 text-2xl font-semibold tracking-wide text-accent md:text-3xl">Sobre mim</p>
           <Words text="Muito além de cuidar de sorrisos, transformar experiências." className="text-4xl font-extrabold tracking-tight leading-[1.1] text-soft md:text-5xl" />
           <div className="mt-8 max-w-prose space-y-5 text-lg leading-[1.75] text-mist/70">
             <Reveal delay={0.1}><p>Sou o Dr. Thiago Reis, dentista com atendimento em Santaluz-BA e Valente-BA.</p></Reveal>
